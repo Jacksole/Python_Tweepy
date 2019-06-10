@@ -1,3 +1,5 @@
+import json
+
 import tweepy
 
 # Authenticate to Twitter
