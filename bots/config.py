@@ -1,20 +1,16 @@
 # tweepy-bots/bots/config.py
+import tweepy
 import logging
 import os
-
-import tweepy
 
 logger = logging.getLogger()
 
 
 def create_api():
-    consumer_key = os.getenv("iTOXXK1fUNrKZs9NsAi25xQHl")
-    consumer_secret = os.getenv(
-        "fvXHoZYFN8vlrbWdXyVSTBcjlC0H3tKHkVKQmTK3KSBqeUH8nQ")
-    access_token = os.getenv(
-        "228125493-n1aNfibgceg5exq1NLi9ptk3DCzyIAUaRvIFmQz6")
-    access_token_secret = os.getenv(
-        "HI68fr3zB7HVK2H304GjhdwQnnFAW3qrAmFOQdS0y9Aio")
+    consumer_key = os.getenv("CONSUMER_KEY")
+    consumer_secret = os.getenv("CONSUMER_SECRET")
+    access_token = os.getenv("ACCESS_TOKEN")
+    access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
