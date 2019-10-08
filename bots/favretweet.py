@@ -31,7 +31,7 @@ def main(keywords):
     api = create_api()
     tweets_listener = FavRetweetListener(api)
     stream = tweepy.Stream(api.auth, tweets_listener)
-    stream.filter(track=keywords, languages=["en'])
+    stream.filter(track=keywords, languages=["en"])
 
 if __name__ == "__main__":
     main(["Python", "Tweepy"])
